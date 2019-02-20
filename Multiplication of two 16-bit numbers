@@ -1,0 +1,26 @@
+Program involving Arithmetic Instructions - Multiplication on 16 bit data
+/**********************************************************************************/
+Program
+/**********************************************************************************/
+DATA SEGMENT
+OPR1 DW 2000H
+OPR2 DW 4000H
+RESLW DW ?
+RESHW DW ?
+DATA ENDS
+ASSUME CS : CODE, DS : DATA
+CODE SEGMENT
+MOV AX, DATA
+MOV DS, AX
+MOV AX, OPR1
+MUL OPR2
+MOV RESLW, AX
+MOV RESHW, DX
+HLT
+CODE ENDS
+END
+ (DX)
+/**********************************************************************************/
+Result:
+RESLW = 0000H (AX)
+RESHW = 0800H (DX)
