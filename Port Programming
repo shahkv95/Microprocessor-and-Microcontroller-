@@ -1,0 +1,57 @@
+# Solution for 1)
+
+//Signed numbers
+#include <reg51.h>
+void main(void)
+{
+char mynum[]={+1,-1,+2,-2,+3,-3,+4,-4};
+unsigned char z;
+for (z=0;z<=8;z++)
+P1=mynum[z];
+}
+
+
+
+# Solution for 2)
+
+
+
+
+
+#include <reg51.h>
+sbit MYBIT=P1^0;
+void main(void)
+{
+unsigned int z;
+for (z=0;z<=50000;z++)
+{
+MYBIT=0;
+MYBIT=1;
+}
+}
+
+
+
+# Solution for 3)
+
+
+
+
+#include <reg51.h>
+void MSDelay(unsigned int);
+void main(void)
+{
+while (1) //repeat forever
+{
+p1=0x55;
+MSDelay(250);
+p1=0xAA;
+MSDelay(250);
+}
+}
+void MSDelay(unsigned int itime)
+{
+unsigned int i,j;
+for (i=0;i<itime;i++)
+for (j=0;j<1275;j++);
+}
