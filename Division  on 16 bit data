@@ -1,7 +1,9 @@
 Program involving Arithmetic Instructions - Division on 16 bit data
+
 /*************************************************************************/
 Program
 /*************************************************************************/
+
 DATA SEGMENT
 OPR1 DW 2C58H
 OPR2 DB 56H
@@ -19,7 +21,9 @@ MOV RESR, AH
 HLT
 CODE ENDS
 END
+
 /*************************************************************************/
+
 Result:
 RESQ = 84H (AL) 
 RESR = 00H (AH)
