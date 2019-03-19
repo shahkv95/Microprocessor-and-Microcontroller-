@@ -3,6 +3,7 @@ Program involving Arithmetic Instructions - Addition - on 16 bit data
 /***********************************************************************************/
 Program code snippet
 /***********************************************************************************/
+
 DATA SEGMENT
 N1 DW 1111H
 N2 DW 2222H
