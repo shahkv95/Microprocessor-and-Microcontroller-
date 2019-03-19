@@ -3,14 +3,15 @@ INKEY DB ?
 BUF DB 20 DUP(0)
 MES DB 10,13, ' SRM UNIVERSITY $'
 DATA ENDS
+
 CODE SEGMENT
 ASSUME CS:CODE , DS:DATA
 START: MOV AX,DATA
 MOV DS,AX
 MOV AH,01H
-INT 21H;DOS function to read a character from
-keyboard ;with echo. [AL = 8bit character]
-MOV INKEY,AL ;Returns ASCII value of the pressed key.
+INT 21H         ;DOS function to read a character from
+keyboard        ;with echo. [AL = 8bit character]
+MOV INKEY,AL    ;Returns ASCII value of the pressed key.
 MOV BUF,10
 MOV AH,0AH
 LEA DX,BUF
